@@ -14,7 +14,7 @@ import java.io.ObjectOutputStream;
  * @author Emds
  *
  */
-abstract class Serializer {
+public abstract class Serializer {
 
 	/**
 	 * Sérialisation d'un objet

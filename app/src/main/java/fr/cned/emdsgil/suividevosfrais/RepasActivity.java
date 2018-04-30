@@ -2,7 +2,6 @@ package fr.cned.emdsgil.suividevosfrais;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.DatePicker.OnDateChangedListener;
@@ -153,6 +152,7 @@ public class RepasActivity extends AppCompatActivity {
      */
     private void retourActivityPrincipale() {
         Intent intent = new Intent(RepasActivity.this, MainActivity.class) ;
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent) ;
     }
 }

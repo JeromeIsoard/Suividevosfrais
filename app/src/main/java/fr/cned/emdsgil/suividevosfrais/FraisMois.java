@@ -6,7 +6,7 @@ import java.util.ArrayList;
 /**
  * Classe métier contenant les informations des frais d'un mois
  */
-class FraisMois implements Serializable {
+public class FraisMois implements Serializable {
 
     private Integer mois; // mois concerné
     private Integer annee; // année concernée

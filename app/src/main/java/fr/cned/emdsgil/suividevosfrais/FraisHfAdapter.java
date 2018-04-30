@@ -1,19 +1,17 @@
 package fr.cned.emdsgil.suividevosfrais;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Locale;
 
-class FraisHfAdapter extends BaseAdapter {
+public class FraisHfAdapter extends BaseAdapter {
 
 	private final ArrayList<FraisHf> lesFrais ; // liste des fraisHf du mois
 	private final LayoutInflater inflater ; // permet de formater la ligne
@@ -100,7 +98,7 @@ class FraisHfAdapter extends BaseAdapter {
 				Context contexte = parent.getContext();
 //				Log.d("contexte", "*************************** le contexte : " + contexte);
 //				Log.d("index", "*************************** l'index du fraishF : " + position);
-				
+
 				// suppression du fraisHf correspondant à l'index de la ligne
 				lesFrais.remove(position);
 				Global.listFraisMois.get(key).supprFraisHf(position);

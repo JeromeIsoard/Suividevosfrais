@@ -8,6 +8,7 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.Hashtable;
 
@@ -75,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 // ouvre l'activité
                 Intent intent = new Intent(MainActivity.this, classe);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
         });
@@ -86,6 +88,10 @@ public class MainActivity extends AppCompatActivity {
     private void cmdTransfert_clic() {
         findViewById(R.id.cmdTransfert).setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
+                // ouvre l'activité d'authentification pour envoi
+                Intent intent = new Intent(MainActivity.this, AuthActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
                 // envoi les informations sérialisées vers le serveur
                 // en construction
             }
